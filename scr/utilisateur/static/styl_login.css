@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Bleu clair */
+    color: #333; /* Couleur de texte principale */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Bleu primaire */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Couleur de texte principale */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button.add-button {
+    background-color: #007bff; /* Bleu primaire */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button.add-button:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Bleu primaire */
+}
+
+a:hover {
+    text-decoration: underline;
+}

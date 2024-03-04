@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>util</title>
+        <link rel="stylesheet" href="{% static 'styl_util.css' %}">
+    </head>
+</head>
+<body>
+  <div class="container">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>mot de passe</th>
+                    <th>email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <input type="hidden" name="id_util" value="{{data.pk}}">              
+                {% for i in data %}               
+                <tr>
+                    <td>{{i.nom_util}}</td>
+                    <td>{{i.prenom_util}}</td>
+                    <td>{{i.pass_util}}</td>
+                    <td>{{i.mail_util}}</td>
+                    <td class="action-buttons">
+                        
+                        <a href="{% url 'deleteUtil' i.pk  %}"><button>Supprimer</button></a>
+                        <a href="{% url 'formChange' i.pk  %}"><button class="edit-button">Modifier</button></a>
+                    </td>
+                </tr>
+                {% endfor %} 
+            </tbody>
+        </table>
+        <a href="{% url 'addUtil'  %}"><button class="add-button">Ajout +</button></a>
+        <a href="{% url 'showAdd' %}"><button  class="admin-button">Admin</button></a>
+        <form action="post">
+            <button><a href="{% url 'logout_out' %}">deconnect</a></button>   
+        </form>
+    </div>
+</div>
+
+</body>
+
+</body>
+</html>

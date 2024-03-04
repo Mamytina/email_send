@@ -1,0 +1,28 @@
+{% load livereload_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% livereload_script %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styl_login.css' %}">
+    <title>Connexion</title>
+</head>
+<body>
+    <h1>Connexion</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Nom d'utilisateur:</label><br>
+        <input type="text" id="username" name="nom_util"><br>
+        <label for="password">Mot de passe:</label><br>
+        <input type="text" id="password" name="pass_util"><br>  
+        <a href="{% url 'login'  %}"><button class="add-button">Se Connecter</button></a>
+        
+    </form>
+         <div class="btn">
+            <a href="{% url 'addUtil_u' %}"><button class="add-button">Creer Compte</button></a>    
+         </div>
+         
+</body>
+</html>

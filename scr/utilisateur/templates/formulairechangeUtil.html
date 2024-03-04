@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editer Utilisateur</title>
+    <link rel="stylesheet" href="{% static 'styl_change.css' %}">
+</head>
+<body>
+    <div id="popup">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Editer Utilisateur</div>
+
+                    <div class="card-body">
+                        <form method="POST" action="{% url 'changeUtil'  %}" class="edit-user-form">
+
+                           {% csrf_token %}
+                           <input type="hidden" name="id_util" value="{{data.pk}}">
+                            <div class="form-group">
+                                <label for="nom">Nom</label>
+                                <input id="nom" type="text" class="form-control" name="nom_util" value="{{data.nom_util}}" autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prenom">Prenom</label>
+                                <input id="prenom" type="text" class="form-control" name="prenom_util" value="{{data.prenom_util}}">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">Mot de passe</label>
+                                <input id="pass" type="password" class="form-control" name="pass_util" value="{{data.pass_util}}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" class="form-control" name="mail_util" value="{{data.mail_util}}">
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">
+                                    Valider
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</body>
+</html>

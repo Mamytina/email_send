@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin</title>
+        <link rel="stylesheet" href="{% static 'viewsAdmin.css' %}">
+    </head>
+</head>
+<body>
+  <div class="container">
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>mot de passe</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <input type="hidden" name="id_ad" value="{{data.pk}}">              
+                {% for i in data %}               
+                <tr>
+                    <td>{{i.nom_ad}}</td>
+                    <td>{{i.prenom_ad}}</td>
+                    <td>{{i.pass_ad}}</td>
+                  
+                    <td class="action-buttons">
+                        <a href="{% url 'formChange_ad' i.pk %}"><button class="edit-button">Modifier</button></a>
+                        <a href="{% url 'deleteAd' i.pk %}"><button class="delete-button">Supprimer</button></a>  
+                    </td>
+                </tr>
+                {% endfor %} 
+            </tbody>
+        </table>
+        <button class="add-button"><a href="{% url 'add_ad' %}">Ajout +</a></button>
+        <form method="get" action="{% url 'logout_out' %}">
+            {% csrf_token %}
+           <button type="submit" class="deconnex_button">deconnect</button>      
+        </form>
+    </div>
+</div>
+
+</body>
+
+</body>
+</html>

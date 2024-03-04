@@ -1,0 +1,73 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Bleu clair */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.table-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff; /* Bleu primaire */
+    color: #fff;
+}
+
+.action-buttons button {
+    background-color: #007bff; /* Bleu primaire */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.action-buttons button.edit-button {
+    background-color: #28a745; /* Vert */
+}
+
+.add-button, .admin-button{
+    background-color: #007bff; /* Bleu primaire */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+
+
+.add-button:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+}
+
+button a:hover {
+    text-decoration: underline;
+}

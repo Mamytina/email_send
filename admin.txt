@@ -1,0 +1,2 @@
+nom:admin
+mot de passe:0000

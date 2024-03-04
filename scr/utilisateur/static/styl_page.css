@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Bleu clair */
+    color: #333; /* Couleur de texte principale */
+    margin: 0;
+    padding: 0;
+}
+
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc; /* Gris */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #007bff; /* Bleu primaire */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #007bff; /* Bleu primaire */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Couleur de texte principale */
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff; /* Bleu primaire */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Bleu foncé au survol */
+}
+
+a {
+    text-decoration: none;
+    color: #007bff; /* Bleu primaire */
+}
+
+a:hover {
+    text-decoration: underline;
+}
